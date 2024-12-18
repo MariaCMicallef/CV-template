@@ -1,0 +1,143 @@
+body {
+   font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.size-page {/*the entire page*/
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+
+
+.left-section {/*the left column*/
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    border-right: 2px solid #ddd;
+    box-sizing:border-box;
+}      
+
+.left-section h2 {/*formatting for contact details, languages etc. - identical to right-section h2 except for the colour*/
+    font-size: 18px;
+    color:white;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+}
+
+.left-section ul {/*removes default bullets and adds some left padding*/
+        list-style: none; 
+        padding-left: 10px;        
+      }
+
+.left-section ul li{/*adds space between bullet lines*/
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+      
+.left-section li::before {/*makes triangular bullet points */
+        content: ''; 
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent; 
+        border-right: 5px solid transparent; 
+        border-bottom: 10px solid white; 
+        margin-right: 10px; 
+}
+
+.right-section {/*the right side*/
+    padding: 0 20px;
+    width: 70%;
+    box-sizing:border-box;
+}
+
+.period {/*dates*/
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+    color: grey;
+    font-weight:light;
+    margin: 5px 0;
+}
+
+.title-subtitle-format {/*name and subtitle*/
+    text-align:right;
+}
+
+.sub-title {
+    font-size: 22px;
+    color: rgb(100, 100, 100);
+    font-family: 'Alegreya Sans', Arial, sans-serif;
+    letter-spacing:1px;
+    margin-top:0; 
+    font-weight:200;
+}
+
+.right-section h1 {/*name*/
+    font-size: 40px;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+    letter-spacing: 2px;
+    margin-bottom:3px;
+}
+
+.right-section h2 {/*work experience, education etc.*/
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+    letter-spacing:1px;
+}
+
+.right-section h3 {/*specific education and work examples*/
+    font-size: 22px;
+    color: black;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+    letter-spacing:1px; 
+    margin:0; 
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+    line-height:1;
+}
+
+.icon {/*standardizes icon shape. .icon inverts the colours of black icons. .icon-white doesn't. .linkedin has slightly different width and height values.*/
+    width: 20px;
+    height: 20px; 
+    margin-right: 7.5px;
+    filter: grayscale(100%) invert(1) brightness(100%);
+}
+
+.icon-white {
+    width: 20px;
+    height: 20px; 
+    margin-right: 7.5px;
+
+}
+
+.linkedin {
+    width: 23.5px;
+    height: 20px;
+    margin-right: 4px;
+    filter: grayscale(100%) invert(1) brightness(100%);
+}
+
+/*When text next to icon takes more than 1 line, it doesn't go under the icon.
+imgandtext is the outer container and text-align-with-img is the inner container.*/
+.img-and-text {
+    display: flex; 
+    margin-bottom: 10px; 
+    overflow-wrap: anywhere;
+}
+
+.text-align-with-img{
+    word-break: break-word; 
+}

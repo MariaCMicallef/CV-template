@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+     margin: 0;
+ }
+ 
+ .size-page {/*the entire page*/
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+
+.left-section {/*the left column*/
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    border-right: 2px solid #ddd;
+    box-sizing:border-box;
+}      
+
+.left-section h2 {/*contact details*/
+    font-size: 18px;
+    color:white;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+}
+
+.left-head {/*name*/
+    text-align: left;
+    font-size:20px;
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
+    letter-spacing: 2px;
+    margin:100px auto 40px auto;/*aligns the name with the date on the right hand side.*/
+}
+
+.icon {/*standardizes icon shape. .icon inverts the colours of black icons. .icon-white doesn't. .linkedin has slightly different width and height values.*/
+    width: 20px;
+    height: 20px; 
+    margin-right: 7.5px;
+    filter: grayscale(100%) invert(1) brightness(100%);
+}
+
+.icon-white {
+    width: 20px;
+    height: 20px; 
+    margin-right: 7.5px;
+
+}
+
+.linkedin {
+    width: 23.5px;
+    height: 20px;
+    margin-right: 4px;
+    filter: grayscale(100%) invert(1) brightness(100%);
+}
+
+/*When text next to icon takes more than 1 line, it doesn't go under the icon.
+imgandtext is the outer container and text-align-with-img is the inner container.*/
+.img-and-text {
+    display: flex; 
+    margin-bottom: 10px; 
+    overflow-wrap: anywhere;
+}
+
+.text-align-with-img{
+    word-break: break-word; 
+}
+
+.right-section {/*the right side*/
+    padding: 0 20px;
+    width: 70%;
+    box-sizing:border-box;
+}
